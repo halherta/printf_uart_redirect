@@ -231,4 +231,4 @@ Things to keep in mind:
 
 ## License
 
-No license file is included in the repository. The STM32 HAL and CMSIS code under `Drivers/` is subject to STMicroelectronics' and Arm's own licenses. Add a `LICENSE` file to state the terms for your own code.
+No license file is included in the repository. The STM32 HAL and CMSIS code under `Drivers/` is subject to STMicroelectronics' and Arm's own licenses.
