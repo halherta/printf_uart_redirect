@@ -18,7 +18,7 @@ It also demonstrates a clean way to **keep your own code separate from CubeMX-ge
 - [Building](#building)
 - [Flashing and viewing output](#flashing-and-viewing-output)
 - [Regenerating code with STM32CubeMX](#regenerating-code-with-stm32cubemx)
-- [Memory Usage on the Nucleo-G474RE (STM32G474RE)](#memory-usage-on-the-nucleo-g474re-(stm32g474re))
+- [Memory Usage on the Nucleo-G474RE (STM32G474RE)](#memory-usage-on-the-nucleo-g474re-stm32g474re)
 - [Adapting to another board or UART](#adapting-to-another-board-or-uart)
 - [Troubleshooting](#troubleshooting)
 - [License](#license)
