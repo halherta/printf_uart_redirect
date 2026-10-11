@@ -18,6 +18,7 @@ It also demonstrates a clean way to **keep your own code separate from CubeMX-ge
 - [Building](#building)
 - [Flashing and viewing output](#flashing-and-viewing-output)
 - [Regenerating code with STM32CubeMX](#regenerating-code-with-stm32cubemx)
+- [Memory Usage on the Nucleo-G474RE (STM32G474RE)](#memory-usage-on-the-nucleo-g474re(stm32g474re))
 - [Adapting to another board or UART](#adapting-to-another-board-or-uart)
 - [Troubleshooting](#troubleshooting)
 - [License](#license)
@@ -203,8 +204,15 @@ Things to keep in mind:
 - If you **rename or change the UART used for printf**, update the UART handle referenced in `retarget.c`.
 - Keep the call from `main()` into `app_main()` inside a `USER CODE BEGIN/END` block so it survives regeneration.
 
-## Adapting to another board or UART
+## Memory Usage on the Nucleo-G474RE (STM32G474RE)
 
+``` bash
+[build] Memory region         Used Size  Region Size  %age Used
+[build]              RAM:        3032 B       128 KB      2.31%
+[build]            FLASH:       22344 B       512 KB      4.26%
+```
+
+## Adapting to another board or UART
 1. Create or update the project in CubeMX for your MCU, enable a UART in *Asynchronous* mode, and select **CMake** as the toolchain/IDE.
 2. Add `app_main.c` and `retarget.c` to the `target_sources()` list in `CMakeLists.txt`.
 3. In `retarget.c`, point the HAL calls at your UART handle (`huart1`, `huart2`, `hlpuart1`, ...).
